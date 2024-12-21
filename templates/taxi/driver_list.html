@@ -8,11 +8,7 @@
       Create
     </a>
   </h1>
-  <form action="" method="get" class="form-inline">
-    {{ search_form|crispy }}
-    <input type="submit" value="🔍" class="btn btn-secondary my-3">
-  </form>
-
+  {% include "includes/search_field.html" %}
   {% if driver_list %}
     <table class="table">
       <tr>
@@ -32,7 +28,6 @@
           <td>{{ driver.license_number }}</td>
         </tr>
       {% endfor %}
-
     </table>
   {% else %}
     <p>There are no drivers in the service.</p>
