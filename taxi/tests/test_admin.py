@@ -50,6 +50,6 @@ class AdminSiteTest(TestCase):
         url = reverse("admin:taxi_driver_add")
         response = self.client.get(url)
 
-        self.assertContains(response, "name=\"first_name\"")
-        self.assertContains(response, "name=\"last_name\"")
-        self.assertContains(response, "name=\"license_number\"")
+        self.assertContains(response, 'name=\"first_name\"')
+        self.assertContains(response, 'name=\"last_name\"')
+        self.assertContains(response, 'name=\"license_number\"')
